@@ -1,6 +1,8 @@
-class AddDayAndGenreAndSeasonToShows < ActiveRecord::Migration[5.1]
+class CreateActors < ActiveRecord::Migration[5.1]
   def change
-    add_column :shows, :day, :string
-    add_column :shows, :season, :string
+    create_table :actors do |t|
+      t.string :first_name
+      t.string :last_name
+    end
   end
 end
